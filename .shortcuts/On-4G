@@ -1,0 +1,22 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+# Kiem tra xem tien trinh psiphon-tunnel-core co dang chay hay khong
+if pgrep psiphon-tunnel-core >/dev/null; then
+    # Neu tien trinh dang chay, thuc hien lenh khoi dong ung dung socks
+    killall psiphon-tunnel-core
+    #su -c svc data disable
+    #su -c "pkill -9 -f net.typeblog.socks"
+    am start -n "moe.nb4a/io.nekohasekai.sagernet.QuickToggleShortcut"
+    am startservice -a com.termux.service_stop com.termux/.app.TermuxService
+	exit
+else
+    # Neu tien trinh khong chay, thuc hien các lenh khac
+    #am start -n "net.typeblog.socks/.MainActivity"
+    am start -n "moe.nb4a/io.nekohasekai.sagernet.QuickToggleShortcut"
+    killall psiphon-tunnel-core
+    #su -c svc data enable
+	#su -c svc wifi disable
+	am start --user 0 -a android.intent.action.MAIN -c android.intent.category.HOME
+    cd ~/vss
+    ./t
+fi
