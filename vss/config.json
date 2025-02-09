@@ -9,12 +9,6 @@
 		"Rules": {
 			"apigami.viettel.vn::443": [
 				"171.244.232.17"
-			],
-			"quanlydoitac.viettel.vn:443": [
-				"171.244.232.19"
-			],
-			"mobile.useinsider.com:443": [
-				"162.159.133.611"
 			]
 		},
 		"Payload": "",
