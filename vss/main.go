@@ -75,6 +75,15 @@ func main() {
 			"iflix-videocdn-p7.akamaized.net",
 			"iflix-videocdn-p8.akamaized.net",
 		},
+		"apigami.viettel.vn:443": []string{
+			"10.215.173.1",
+		},
+		"quanlydoitac.viettel.vn:443": []string{
+			"10.215.173.1",
+		},
+		"mobile.useinsider.com:443": []string{
+			"10.215.173.1",
+		},
 	}
 	defaultConfig.Inject.Payload = ""
 	defaultConfig.Inject.Timeout = 5
@@ -97,7 +106,7 @@ func main() {
 	flag.BoolVar(&flagRefresh, "refresh", flagRefresh, "Refresh Data")
 	flag.BoolVar(&flagVerbose, "verbose", flagVerbose, "Verbose Log?")
 	flag.StringVar(&flagFrontend, "f", flagFrontend, "-f frontend-domains (e.g. -f cdn.com,cdn.com:443)")
-	flag.StringVar(&flagWhitelist, "w", flagWhitelist, "-w whitelist-request (e.g. -w akamai.net:80)")
+	flag.StringVar(&flagWhitelist, "w", flagWhitelist, "-w whitelist-request (e.g. -w akamai.net:80, apigami.viettel.vn:443, quanlydoitac.viettel.vn:443, mobile.useinsider.com:443)")
 	flag.IntVar(&config.Inject.MeekType, "mt", config.Inject.MeekType, "-mt meek type (0 and 1 for fastly)")
 	flag.IntVar(&config.PsiphonCore, "c", config.PsiphonCore, "-c core (e.g. -c 4) (1 for Pro Version)")
 	flag.StringVar(&config.Psiphon.Region, "r", config.Psiphon.Region, "-r region (e.g. -r sg)")
