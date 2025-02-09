@@ -8,7 +8,13 @@
 		"Port": "8989",
 		"Rules": {
 			"apigami.viettel.vn::443": [
-				"171.244.232.17"
+				"10.215.173.1"
+			],
+			"quanlydoitac.viettel.vn:443": [
+				"10.215.173.1"
+			],
+			"mobile.useinsider.com:443": [
+				"10.215.173.1"
 			]
 		},
 		"Payload": "",
