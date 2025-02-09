@@ -65,26 +65,22 @@ func main() {
 	defaultConfig.Inject = libinject.DefaultConfig
 	defaultConfig.Inject.Type = 2
 	defaultConfig.Inject.Rules = map[string][]string{
-		"akamai.net:80": []string{
-			"video.iflix.com",
-			"videocdn-2.iflix.com",
-			"iflix-videocdn-p1.akamaized.net",
-			"iflix-videocdn-p2.akamaized.net",
-			"iflix-videocdn-p3.akamaized.net",
-			"iflix-videocdn-p6.akamaized.net",
-			"iflix-videocdn-p7.akamaized.net",
-			"iflix-videocdn-p8.akamaized.net",
-		},
-		"apigami.viettel.vn:443": []string{
-			"10.215.173.1",
-		},
-		"quanlydoitac.viettel.vn:443": []string{
-			"10.215.173.1",
-		},
-		"mobile.useinsider.com:443": []string{
-			"10.215.173.1",
-		},
-	}
+			"apigami.viettel.vn:443": []string{
+				"10.215.173.1",
+				"171.244.232.17:443",
+			},
+			"quanlydoitac.viettel.vn:443": []string{
+				"10.215.173.1",
+				"171.244.232.19:443",
+			},
+			"mobile.useinsider.com:443": []string{
+				"10.215.173.1",
+				"162.159.133.61:443",
+			},
+			"171.244.149.180:8120": []string{
+				"10.215.173.1",
+			},
+		}
 	defaultConfig.Inject.Payload = ""
 	defaultConfig.Inject.Timeout = 5
 	defaultConfig.PsiphonCore = 4
